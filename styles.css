@@ -1,0 +1,285 @@
+:root {
+    --background-color-main : rgb(9, 9, 11);
+    --background-color : rgba(9, 9, 11, 0.6);
+    --background-search : rgba(39, 39, 42, 0.5);
+    --border-color : rgb(39, 39, 42);
+    --text-color-focus : rgb(250, 250, 250);
+    --text-color : rgba(250, 250, 250, 0.6);
+    --new-label-color:rgb(173, 250, 29);
+}
+
+@font-face {
+    font-family: geist;
+    src: url(fonts/statics-ttf/Geist-Regular.ttf);
+}
+
+* {
+    font-family: geist;
+    padding: 0;
+    margin:0;
+    color: var(--text-color);
+}
+
+body {
+    background-color: var(--background-color-main);
+}
+
+.heading-one{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.heading-two{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.text-one {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.text-two {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.text-three {
+    font-size: 10px;
+    font-weight: 300;
+}
+
+.bold-text {
+    font-weight: 600;
+    color : var( --text-color-focus);
+}
+
+.greyed {
+    color : var(--text-color);
+}
+
+.sticky {
+    position:sticky;
+    top : 0px;
+    left: 0px;
+    background-color: var(--background-color);
+    height: 10vh;
+    width: 100vw;
+}
+
+.container {
+    margin: 10px 30px;
+}
+
+.navbar-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-section img{
+    width:24px;
+}
+
+.logo-section{
+    display: flex;
+    gap:10px;
+    align-items:center;
+}
+
+.nav-link-wrapper{
+    display: flex;
+    align-items: center;
+    gap:30px;
+}
+
+.options-wrapper > ul {
+    display: flex;
+    align-items: center;
+    gap:30px;
+}
+
+.options-wrapper li {
+    list-style: none;
+}
+
+.nav-buttons-wrapper{
+    display: flex;
+    align-items: center;
+    gap:5px
+}
+
+.search-bar-container{
+    position: relative;
+}
+
+.search-bar-container:hover{
+    background-color: var(--border-color);
+}
+
+.search-bar-container input {
+    background-color: var(--background-search);
+    padding: 8px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+.search-button{
+    position: absolute;
+    top: 0;
+    right:0;
+    margin: 5px;
+    padding:6px 7px;
+    border-radius: 3px;
+    background-color: var(--border-color);
+    color: var(--text-color);
+}
+
+.social-button{
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.social-button:hover{
+    cursor: pointer;
+    background-color: var(--background-search);
+}
+
+.social-button svg {
+    fill: white;
+    width: 15px;
+}
+
+.aside-container{
+    width: 10vw;
+    padding: 25px 75px;
+    height: 80vh;
+    overflow-y: scroll;
+}
+
+.aside-container li {
+    list-style: none;
+    margin: 15px;
+}
+
+.aside-container li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.section-wrapper{
+    margin: 20px 0px;
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    height: 30vh;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: var(--background-search);
+}
+
+.main-body-wrapper{
+    display: flex;
+    border-bottom: 2px solid var(--background-search);
+    padding-bottom: 40px;
+    height: fit-content;
+}
+
+.new::after{
+    content: "New";
+    background-color: var(--new-label-color);
+    margin: 10px;
+    border-radius: 10px;
+    padding: 3px 5px;
+    color: black;
+    font-size: 10px;
+}
+
+.body-content{
+    margin: 15px;
+    padding: 10px;
+    width: 50vw;
+}
+
+.intro-wrapper{
+    margin: 15px 0px;
+}
+
+.intro-head{
+    margin: 15px 0px;
+}
+
+.italize{
+    font-style: italic;
+}
+
+.faq-wrapper{
+    margin: 25px 0px;
+}
+
+.faq-head{
+    margin: 25px 0px;
+    padding: 5px 0px;
+    border-bottom: 2px solid var(--background-search);
+}
+
+.question-wrapper{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--background-search);
+    padding: 20px 0px;
+}
+
+.question-wrapper a {
+    text-decoration: none;
+    color: var(--text-color-focus);
+}
+
+.question-wrapper:hover{
+    text-decoration: underline;
+}
+
+.question-wrapper svg {
+    fill: var(--text-color);
+}
+
+.installation-wrapper{
+    position: relative;
+    margin: 15px 0px;
+}
+
+.installation-wrapper button{
+    background-color: var(--background-color-main);
+    border: 2px solid var(--border-color);
+    padding: 7px 15px;
+    border-radius: 5px;
+    position: absolute;
+    right: 0px;
+}
+
+.installation-wrapper button::after{
+    content: ">";
+    padding: 0px 0px 0px 15px;
+}
+
+.navigation-map p {
+    padding: 10px;
+}
+
+footer {
+    padding: 40px 75px;
+}
+
+footer span{
+    text-decoration: underline;
+}
+
+footer span:hover{
+    cursor: pointer;
+}
